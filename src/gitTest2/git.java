@@ -17,8 +17,6 @@ public class git {
 			System.out.println("|  프로그램 종료 : exit   |");
 			System.out.println("--------------------------");
 			String s = sc.nextLine();
-			int cnt = 1;
-			int cnt2 = 1;
 			if(s.equals("exit")) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
@@ -28,10 +26,10 @@ public class git {
 				title[i] = sc.nextLine();
 				System.out.println("내용 : ");
 				text[i] = sc.nextLine();
+				i++;
 			}
-			i++;
 			if(s.equals("list")) {
-				for(int j = 0; j < i - 1; j++) {
+				for(int j = 0; j < i; j++) {
 					System.out.println("제목 : " + title[j]);
 					System.out.println("내용 : " + text[j]);
 					System.out.println("");

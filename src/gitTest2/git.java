@@ -5,17 +5,14 @@ public class git {
 
 	public static void main(String[] args) {
 
+		input a = new input();
 		Scanner sc = new Scanner(System.in);
 		String[] title = new String [100];
 		String[] text = new String [100];
 		int i = 0;
 		
 		while(true) {
-			System.out.println("--------------------------");
-			System.out.println("|    게시글 추가 : add    |");
-			System.out.println("|   게시글 조회 : list    |");
-			System.out.println("|  프로그램 종료 : exit   |");
-			System.out.println("--------------------------");
+			a.menu();
 			String s = sc.nextLine();
 			if(s.equals("exit")) {
 				System.out.println("프로그램을 종료합니다.");
@@ -36,9 +33,18 @@ public class git {
 				}
 			}
 		}
-		
 	}
 
+}
+
+class input {
+	void menu() {
+		System.out.println("--------------------------");
+		System.out.println("|    게시글 추가 : add    |");
+		System.out.println("|   게시글 조회 : list    |");
+		System.out.println("|  프로그램 종료 : exit   |");
+		System.out.println("--------------------------");
+	}
 }
 
 
